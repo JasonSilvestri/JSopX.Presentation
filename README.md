@@ -204,16 +204,20 @@ Building and Running the `JSopX.Presentation` Project in Visual Studio is also a
 
 Assuming the `JSopX.Presentation` Project is running as expected, **you are now done** with the **installation** and **execution** of the project!
 
-1. **Skip Remaining Steps**: 
-   - Technically, you could skip to the [Next Steps](#next-steps) section if you are on a project-by-project installation mission.
-2. **Conclude Remaining Steps**:
-   - **Me personally?** I would continue on to the remaining steps _below_, starting at **[Step 5: Project Structure](#step-5-project-file-structure)**. There is just very useful information related to the project that I would find helpful.
-
 [`Back to Top`](#table-of-contents)
 
 ---
 
 ## **Step 5: Project File Structure**
+
+### 🎯 **DRIFT ALERT**:
+
+> [!CAUTION]
+> Jason recently discovered that _**many**_ of the final iterations of `validation` and `package` scripts recently created (and required) to conclude units-of-work in projects just like this one, often end up drifting to a point of no return. 
+>
+> It's suspected there is a confusion of project and solution paths, with respects to Visual Studio projects in specific, resulting in script test failing. This includes most **`Node`**, **`powershell`**,  **`yaml`**, etc.
+
+---
 
 The `JSopX.Presentation` Project in particular, contains several files and directories, all with their own functionality & purpose for existing. 
 
@@ -221,18 +225,37 @@ For brevity, samples will not have the complete file structure you get when inst
 
 ---
 
-### **Step: 5.1: Structured Project & Solution Considerations**:
+### **Step: 5.1: Most Common Solution & Project Naming Convention**:
 
 All `JSopX™ projects` follow a consistent directory structure. 
 
-1. The `JSopX.Presentation` Project naming conventions include capital casing for `.Server` directories and lowercase for `.client` directories.
-2. I create a [Visual Studio](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#visual-studio) Solution Folder to house the primary `.sln` solution file.
-3. I create a Client-Side Project Folder for `.esproj` project files, and related files
-4. I create a similar Server-Side Project Folder for `.csproj`, and related files.
+The **most common** `JSopX™ Visual Studio Projects` that tend to have **no more than one** child project, typical uses the following naming convention:
+- `JSopX.<solution>` with its own folder and `.sln` solution file, 
+- Followed by a sub `JSopX.<project>` folder and `.csproj` project file with the same name.
+   
+   **For Example**:
+ 
+    ```text
+    # The most common JSopX™ projects
 
+    JSopX.<Solution>/                # Root JSopX Visual Studio Solution folder (Repository Root).
+    ├── JSopX.<Solution>.sln         # Visual Studio solution file for Presentation.
+    ├── JSopX.<Project>/             # ASP.NET Core Razor Class Library for raw assets folder.
+    │   ├── JSopX.<Project>.csproj   # Visual Studio Project configuration file.
+    ```
+---
+
+### **Step: 5.2: `JSopX.Presentation` Project Naming Convention**:
+
+The `JSopX.Presentation` Project naming convention uses:
+ - The `JSopX.<solution>` with its own folder and `.sln` solution file, 
+ - followed by several sub `JSopX.<project>` folders and `.csproj` project files with different names. 
+   
+**For Example**:
+ 
 At the highest level, a common, plain-text file folder structure of the `JSopX.Presentation` Solution and Projects should look something like what follows:
 
-```plaintext
+```text
 # JSopX™ Presentation Solution and Projects
 
 JSopX.Presentation/              # Root JSopX.Presentation Visual Studio Solution folder (Repository Root).
@@ -264,233 +287,81 @@ JSopX.Presentation/              # Root JSopX.Presentation Visual Studio Solutio
 ├── .gitignore                   # GitHub Specifies files and directories to ignore in version control.
 ├── JSopX.Presentation.sln       # Visual Studio solution file for Presentation.
 ├── LICENSE.txt                  # GitHub Licensing information for the project.
-├── PathConfig.targets           # Centralized MSBuild target configuration for project references.
 ├── README.md                    # High-level project documentation (you are here!).
-├── JSopX.AssetsRCL/             # ASP.NET Core Razor Class Library for raw assets folder.
+├── JSopX.AssetsRCL/             # Primary ASP.NET Core Razor Class Library project directory for raw assets.
 │   ├── JSopX.AssetsRCL.csproj   # Visual Studio Project configuration file.
-├── JSopX.LazyRCL/               # ASP.NET Core Razor Class Library for raw assets folder.
+├── JSopX.LazyRCL/               # Primary ASP.NET Core Razor Class Library project directory for overabundance of raw assets folder, bootstrap icons, examples, etc.
 │   ├── JSopX.LazyRCL.csproj     # Visual Studio Project configuration file.
-├── JSopX.ProperRCL/             # ASP.NET Core Razor Class Library for raw assets folder.
+├── JSopX.ProperRCL/             # Primary ASP.NET Core Razor Class Library project directory for light-weight, production-ready version of required RCL assets.
 │   ├── JSopX.ProperRCL.csproj   # Visual Studio Project configuration file.
 
 ```
 
-[`Back to Top`](#table-of-contents)
-
 ---
+
+### **Step: 5.3: Local Repository Locations**:
+
+**`JSopX.Presentation` Solution**:
 
 ```
-JSopX.AssetsRCL: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.ProperRCL\JSopX.ProperRCL.csproj (in 1.23 sec).
-JSopX.LazyRCL: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.LazyRCL\JSopX.LazyRCL.csproj (in 1.24 sec).
-JSopX.ProperRCL: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.LazyRCL\JSopX.LazyRCL.csproj (in 1.24 sec).
+JSopX.Presentation: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.Presentation.sln.
 ```
 
-### **Step: 5.3: Structured Table**:
+**`JSopX.Presentation` Projects**:
 
-A table structure of the same with no tree legs `JSopX.Presentation` Project, files and resources.
-
-
-| **File/Directory**                        | **Description**                                                                                   |
-|:------------------------------------------|:--------------------------------------------------------------------------------------------------|
-| &nbsp;📁&nbsp;**JSopX.Presentation/**&nbsp;                | Parent `JSopX.Presentation` Visual Studio Solution folder, containing both client and server code.|
-| &nbsp;├&nbsp;📝&nbsp;`.gitattributes`&nbsp;                   | Git attributes file for repository metadata and configurations. |
-| &nbsp;├&nbsp;📝&nbsp;`.gitignore `&nbsp;                      | Specifies files and directories to ignore in version control. |
-| &nbsp;├&nbsp;📝&nbsp;`JSopX.Presentation.sln`&nbsp;            | Visual Studio `.sln` solution file linking the client and server projects. |
-| &nbsp;├&nbsp;📝&nbsp;`LICENSE.txt`&nbsp;                      | Licensing information for the project (generally `MIT` open-source license). |
-| &nbsp;├&nbsp;📝&nbsp;`PathConfig.targets`&nbsp;               | Centralized MSBuild target configuration for project references, used in conjunction with Git Sub Trees, to retain all files and references, while dynamically resetting reference paths if necessary. |
-| &nbsp;├&nbsp;📝&nbsp;`README.md`&nbsp;                      | The current, most recent, primary project README `.md` file. |
-| &nbsp;├&nbsp;📁&nbsp;**jsopx.reactcore.client**&nbsp;         | React client-side application folder, housing the front-end implementation. |
-| &nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`jsopx.reactcore.client.esproj`&nbsp;     | React client-side Visual Studio project `.esproj` configuration file. |
-| &nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`angular.json`&nbsp;                     | React CLI configuration file for workspace and project settings. |
-| &nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`package.json`&nbsp;                     | NPM metadata file listing project dependencies and scripts. |
-| &nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📁&nbsp;**`src/`**&nbsp;                               | Main source directory for React, containing app components and assets. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📁&nbsp;**`app/`**&nbsp;                             | Core React modules, components, and routing configurations. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`app-routing.module.ts`&nbsp;          | Defines route configurations for React components. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`app.component.css`&nbsp;              | Styles for the main application component. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`app.component.html`&nbsp;             | HTML template for the main application component. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`app.component.spec.ts`&nbsp;          | Unit test file for the main application component. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`app.component.ts`&nbsp;               | TypeScript logic for the main application component. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`app.module.ts`&nbsp;                  | Root React module that declares components and imports dependencies. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`index.html`&nbsp;                     | Root HTML file that bootstraps the React application. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`main.ts`&nbsp;                        | Entry point file where React initializes and bootstraps the application. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`proxy.conf.js`&nbsp;                  | Configuration file for setting up API proxying in React. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`styles.css`&nbsp;                     | Global stylesheet for React application. |
-| &nbsp;├&nbsp;📁&nbsp;**JSopX.Presentation.Server**&nbsp;         | ASP.NET Core server-side folder for back-end logic and API endpoints. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`JSopX.Presentation.Server.csproj`&nbsp;     | React server-side Visual Studio project `.csproj` configuration file. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`Program.cs`&nbsp;                       | Main entry point for the ASP.NET Core application, initializing services. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📁&nbsp;**`Controllers/`**&nbsp;                     | Contains API controllers that handle HTTP requests and responses. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`appsettings.json`&nbsp;                 | Configuration file for application settings like connection strings. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├&nbsp;📝&nbsp;`WeatherForecast.cs`&nbsp;               | Example Weather Forecast model class provided by ASP.NET Core templates for demonstration. |
-
-[`Back to Top`](#table-of-contents)
-
----
-
-## **Step 6: JSopX™ Project References & Dependencies**
-
-> [!TIP]
->
-> The `JSopX.Presentation` Project should already have the JSopX™ Project References & Dependencies described below included!
-> 
-
----
-
-Most `JSopX™ Projects` leverage shared resources and code from other projects within the JSopX™ ecosystem. This ensures modularity, maintainability, and scalability.
-
-The `JSopX.Presentation` Project has the following `JSopX` Project Dependencies:
-
-1. **`JSopX.BridgeTooFar`**:
-   - A [Shared Assets & Resources Projects](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Introduction/JSopxProjectsFamilies.md#2-shared-assets--resources-projects) that contains reusable static assets and project documentation.
-   - **Explore GitHub**: [JSopX.BridgeTooFar](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.BridgeTooFar)
-
-2. **`JSopX.ClassLibrary`**:
-   - A [Shared Data, Service & Function Project](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Introduction/JSopxProjectsFamilies.md#3-shared-data-service--function-projects) that houses shared business logic and helper methods.
-   - **Explore GitHub**: [JSopX.ClassLibrary](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ClassLibrary)
-
-3. **`JSopX.WebAPI`**:
-   - A [Shared Data, Service & Function Project](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Introduction/JSopxProjectsFamilies.md#3-shared-data-service--function-projects) which acts as the centrialized **Web API**, used by all projects that access data endpoints in the application.
-   - **Explore GitHub**: [JSopX.WebAPI](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.WebAPI)
- 
-4. **`JSopX.RCLxProper`**:
-   - An extremely light-weight, [Shared Assets & Resources Projects](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Introduction/JSopxProjectsFamilies.md#2-shared-assets--resources-projects) version of the `JSopX.Assets` Razor Class Library, specifically designed for Production-Ready environments.
-   - **Explore GitHub**: [JSopX.RCLxProper](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.RCLxProper)
-
-
-[`Back to Top`](#table-of-contents)
-
----
-
-## **Step 7: Usage**
-
-Although the `JSopX.Presentation` project is primarily designed as a self-contained demonstration project, it is fully capable of integration with other JSopX™ projects. Here's how to add it to your project:
-
----
-
-### **Step 7.1: Adding the JSopX™ Presentation to Other Projects**
-
-1. **Add Project Reference**:
-   - Open your solution in Visual Studio.
-   - Right-click the project that will use `JSopX.Presentation` and select `Add > Project Reference`.
-   - Check the box for `JSopX.Presentation` and click `OK`.
-
----
-
-## **Step 8: Extended Usage**
-
-> [!TIP]
-> These particular `Extended Usage` examples **are not** required to implement. They are just example extended usages for those of whom are new to projects like the `JSopX.Presentation` Project.
->
-
----
-
-### **Step 8:1. ASP.NET Core Server Project**
-
-1. Add dependency injection for shared services in `Program.cs`:
-
-   ```csharp
-   builder.Services.AddScoped<ExampleService>();
-   ```
-
-2. Create or modify controllers to expose endpoints:
-
-   ```csharp
-   [ApiController]
-   [Route("api/[controller]")]
-   public class ExampleController : ControllerBase {
-       private readonly ExampleService _service;
-
-       public ExampleController(ExampleService service) {
-           _service = service;
-       }
-
-       [HttpGet]
-       public IActionResult GetExample() {
-           var data = _service.GetExampleData();
-           return Ok(data);
-       }
-   }
-   ```
-
-[`Back to Top`](#table-of-contents)
-
----
-
-## React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
----
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+JSopX.AssetsRCL: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.ProperRCL\JSopX.AssetsRCL.csproj.
+JSopX.LazyRCL: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.LazyRCL\JSopX.LazyRCL.csproj.
+JSopX.ProperRCL: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.LazyRCL\JSopX.ProperRCL.csproj.
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**`JSopX.OpenProjectX` Enterprie Solution Git Tree**:
+> This `JSopX.OpenProjectX` enterprise solution has not yet incorporated the `JSopX.Presentation` project solution and child projects.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```
+JSopX.OpenProjectX: E:\All\Repos\JasonSilvestri\JSopX.OpenProjectX\JSopX.OpenProjectX.sln.
 ```
 
----
-
-## **Next Steps**
-
-Carefully choose the approach below that fits your current objective:
+[`⇧ Back to Top`](#table-of-contents)  
 
 ---
 
-- **[Continue](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.VueCore/README.md)** → _Continue_ as **you were**, exploring and/or installing other projects like you did with **this project**. You'll move onto the next project, using the `JSopX.VueCore` _Using Latest_ Variant.  
+
+### **Step: 5.4: Github Repository Locations**:
+
+**`JSopX.Presentation` Solution**:
+
+```
+JSopX.Presentation: https://github.com/JasonSilvestri/JSopX.Presentation/blob/master/JSopX.Presentation.sln.
+```
+
+**`JSopX.Presentation` Projects**:
+
+```
+JSopX.AssetsRCL: https://github.com/JasonSilvestri/JSopX.Presentation/blob/master/JSopX.AssetsRCL/JSopX.AssetsRCL.csproj.
+JSopX.LazyRCL: https://github.com/JasonSilvestri/JSopX.Presentation/blob/master/JSopX.AssetsRCL/JSopX.LazyRCL.csproj.
+JSopX.ProperRCL: https://github.com/JasonSilvestri/JSopX.Presentation/blob/master/JSopX.AssetsRCL/JSopX.ProperRCL.csproj.
+```
+
+**`JSopX.OpenProjectX` Enterprie Solution Git Tree**:
+> This `JSopX.OpenProjectX` enterprise solution has not yet incorporated the `JSopX.Presentation` project solution and child projects.
+
+```
+https://github.com/JasonSilvestri/JSopX.OpenProjectX/blob/master/JSopX.OpenProjectX.sln.
+```
+
+[`⇧ Back to Top`](#table-of-contents)  
 
 ---
 
-- [Browse By-Phase](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ReactCore/p1/v1/README.md): **Browse** **previous versions** of the application by **phases** using the `JSopX.Presentation` _By-Phase_ Variant.   
-- [Start From Scratch](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ReactCore/p1/v1/RECREATEME.md): **Create project** from scratch, step-by-step, using the `JSopX.Presentation` _From Scratch_ Variant.
-- [Get All Projects](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.OpenProjectX/README.md): **Get all projects** instead, using the `JSopX.OpenProjectX` Enterprise Application.
+### **Step: 5.5: Quick Start**:
 
----
+1) Put JSON clips/expanders under `Projects/<project>/clips` and `Projects/<project>/expanders` (you can create these folders).
+2) Schemas live in `wwwroot/schemas`. The app validates JSON against these.
+3) Run the site, open `/Validate`, paste or upload JSON, pick a schema, and validate.
+4) Use breadcrumbs (`meta.breadcrumbs.origin/next`) and identity rules while iterating.
 
-[`Home`](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ReactCore/README.md) » [`Introduction`](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Introduction/) » [`Projects`](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/) · · **`Use Latest`** · [`By-Phase`](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ReactCore/p1/v1/README.md) · [`From Scratch`](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ReactCore/p1/v1/RECREATEME.md) · · [`Back to Top`](#table-of-contents) · [`« Previous`](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.AngularCore/) [`Next »`](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.VueCore/)
+[`⇧ Back to Top`](#table-of-contents)  
 
 ---
 
