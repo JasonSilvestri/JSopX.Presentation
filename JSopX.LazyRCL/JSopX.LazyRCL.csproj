@@ -4,15 +4,15 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-        <!-- Makes your static web assets appear under /_content/jsopx.assets/... -->
-        <StaticWebAssetBasePath>jsopx.assets</StaticWebAssetBasePath>
-        <Title>JSopX™ - Presentation Assets RCL (v1)</Title>
+        <!-- Makes your static web lazy appear under /_content/jsopx.lazy/... -->
+        <StaticWebAssetBasePath>jsopx.lazy</StaticWebAssetBasePath>
+        <Title>JSopX™ - Presentation Lazy RCL (v1)</Title>
         <Authors>Jason Silvestri</Authors>
-        <Company>Independent Care Systems Inc (ICSI)</Company>
-        <Description>JSopX™ - Presentation Assets RCL (v1), codename, JSopX.AssetsRCL.Prod.RCL, is a Cross-Platform Prototype Razor Class Library for JSopX™ Production Environment.</Description>
+        <Company>JSopX™</Company>
+        <Description>JSopX™ - Presentation Lazy RCL (v1), codename, JSopX.LazyRCL, is a Cross-Platform Prototype Razor Class Library for JSopX™ Open Project EXperience User Production Environment.</Description>
         <Copyright>Copyright © 2025 – All Rights Reserved by Jason Silvestri</Copyright>
         <PackageProjectUrl>https://jsopx.com/</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/JasonSilvestri/JSopX.AssetsRCL.git</RepositoryUrl>
+        <RepositoryUrl>https://github.com/JasonSilvestri/JSopX.Presentation.git</RepositoryUrl>
 
       </PropertyGroup>
 

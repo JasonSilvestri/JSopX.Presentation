@@ -5,15 +5,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
 
-    <!-- Makes your static web assets appear under /_content/jsopx.prod/... -->
-    <StaticWebAssetBasePath>jsopx.prod</StaticWebAssetBasePath>
+    <!-- Makes your static web assets appear under /_content/jsopx.proper/... -->
+    <StaticWebAssetBasePath>jsopx.proper</StaticWebAssetBasePath>
     <Title>JSopX™ - Presentation Proper RCL (v1)</Title>
     <Authors>Jason Silvestri</Authors>
     <Company>Independent Care Systems Inc (ICSI)</Company>
-    <Description>JSopX™ - Presentation Proper RCL (v1), codename, JSopX.ProperRCL.Prod.RCL, is a Cross-Platform Prototype Razor Class Library for JSopX™ Production Environment.</Description>
+    <Description>JSopX™ - Presentation Proper RCL (v1), codename, JSopX.ProperRCL, is a Cross-Platform Prototype Razor Class Library for JSopX™ Production Environment.</Description>
     <Copyright>Copyright © 2025 – All Rights Reserved by Jason Silvestri</Copyright>
     <PackageProjectUrl>https://jsopx.com/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/JasonSilvestri/JSopX.ProperRCL.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/JasonSilvestri/JSopX.Presentation.git</RepositoryUrl>
 
   </PropertyGroup>
 
