@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "title": "Breaker \u2014 Trail Tech Intro  and Half (Director's Cut)",
+    "project": "The Official Bigfoot Vlog",
+    "identity_lock": true
+  },
+  "character_sheet": {    
+    "id": "7330F811-F47F-41BC-A4FF-E792D073F41F",
+    "character": "Breaker",
+    "identity_lock": true,
+
+         
+    "height": "6 ft 6 in",
+    "build": "compact, athletic",
+    "fur": "warm chestnut-brown",
+    "face": "youthful; bright, curious expression",
+    "eyes": "hazel; quick darting focus",
+    "distinctives": [
+      "red baseball cap backward",
+      "rectangular glasses",
+      "headphones around neck",
+      "metal tech gauntlet on right forearm"
+    ],
+    "gear": [
+      "field notebook tucked at back pocket",
+      "gauntlet wrist LEDs"
+    ],
+    "demeanor": "eager, playful, kinetic; tinkerer energy",
+    "voice": "clear mid-range, airy"
+  },
+  "config": {
+    "duration": "8s",
+    "resolution": "3840x2160",
+    "fps": 60,
+    "aspect_ratio": "16:9",
+    "no_subtitles": true,
+    "subtitles": "off",
+    "captions": "off"
+  },
+  "constraints": [
+    "Do not render or burn-in subtitles, captions, lyrics, or any on-screen text.",
+    "No additional characters appear in frame.",
+    "Feet must be human-like, plantigrade (five toes, natural arch); no ape-like/digitigrade feet."
+  ],
+  "scene_number": "BR-2000-DC",
+  "description": "On a fern-lined logging trail at blue-hour, Breaker jogs in, quick-scans with his gauntlet, and introduces himself with a grin.",
+  "setting": {
+    "location": "Abandoned logging road, soft dirt with ferns",
+    "time_of_day": "Blue-hour dusk",
+    "weather": "Calm, post-rain coolness",
+    "environment_details": "Moist air haze; distant creek; occasional fireflies; wet leaf sheen"
+  },
+  "subjects": [
+    {
+      "type": "character",
+      "character_id": "7330F811-F47F-41BC-A4FF-E792D073F41F",
+      "character_name": "Breaker",
+      "description": "6'6\" athletic Bigfoot; chestnut fur; red cap backward; rectangular glasses; headphones at neck; metal tech gauntlet (right)",
+      "action": "jogs into frame, raises gauntlet for a quick scan, glances to lens with a grin, speaks, then playful tap to cap brim"
+    }
+  ],
+  "camera": {
+    "angle": "medium following \u2192 medium-close",
+    "motion": "gentle handheld follow from ~2 m back; settle to quasi-static on delivery",
+    "lens": "28mm (FF equiv.)",
+    "position": "shoulder height (~1.6 m)",
+    "framing": "trail leading lines; ferns FG parallax; fireflies intermittent"
+  },
+  "style": {
+    "keywords": [
+      "photorealistic",
+      "RED cinema camera",
+      "high dynamic range",
+      "subtle film grain",
+      "natural lens breathing",
+      "no painterly stylization",
+      "tech surface realism (metal/LED)"
+    ]
+  },
+  "effects": [
+    "cool blue-hour top light with soft fill",
+    "gauntlet HUD glow reflected in glasses; two fireflies cross foreground"
+  ],
+  "shots": [
+    {
+      "time": "0.0-2.0",
+      "framing": "medium follow",
+      "action": "Breaker jogs in; tiny splash through shallow puddle; headphones bounce"
+    },
+    {
+      "time": "2.0-3.6",
+      "framing": "medium",
+      "action": "raises gauntlet; quick scan sweep; LEDs tick"
+    },
+    {
+      "time": "3.6-6.6",
+      "framing": "medium-close",
+      "action": "Breaker locks eyes to lens, parks stance, delivers line with bright grin"
+    },
+    {
+      "time": "6.6-8.0",
+      "framing": "hold medium-close",
+      "action": "drops gauntlet; playful two-finger tap to cap brim backward; short chuckle"
+    }
+  ],
+  "audio": {
+    "ambient": "distant creek; damp forest hush; a few night insects starting",
+    "foley": "soft jog footfalls; puddle splash; gauntlet servo whirr and LED clicks; cap brim tap",
+    "mix_notes": "keep speech forward and clean; ambience ~-14 LUFS relative; minimal reverb"
+  },
+  "performance": {
+    "speech": {
+      "character_id": "7330F811-F47F-41BC-A4FF-E792D073F41F",
+      "character_name": "Breaker",
+      "mode": "non_captionable",
+      "audible": true,
+      "script_type": "ipa",
+      "time": "4.0-6.6",
+      "content": "\u0251\u02d0\u026b\u02c8\u0279a\u026at \u0261a\u026az \u2026 a\u02d0v b\u026an \u02c8t\u00e6\u02d0skt w\u026a\u03b8 \u026ak\u02c8sple\u02d0n\u026a\u014b s\u028cm \u03b8\u026a\u014bz."
+    },
+    "lip_sync_hint": "easy smile on 'guys'; clear alveolar on 'tasked'; brief jaw relax after ellipsis.",
+    "speech_pacing": 0.88,
+    "regional_tone": "en-US-NewEngland"
+  },
+  "render_hints": {
+    "grain": "fine filmic",
+    "anti_painterly_strength": 0.9,
+    "compression": "preserve fog gradient and fur edges",
+    "continuity_expand": false
+  }
+}

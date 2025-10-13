@@ -1,0 +1,171 @@
+{
+
+  "meta": {
+    "title": "Breaker — Trail Tech Intro Five and Half (Director's Cut)",
+    "project": "The Official Bigfoot Vlog",
+    "project_id": "9c5907d6-f88e-4812-9b37-87686525e067",
+    "identity_lock": true,
+
+    "author": "Jason Silvestri",
+    "co_authors": "Lumina, Gemini",
+    "inventor": "This video text prompt format was invented by Jason Silvestri",
+    "copyright": "(c) 2024 Jason Silvestri"
+
+  },
+
+  "character_sheet": {    
+    "id": "7330F811-F47F-41BC-A4FF-E792D073F41F",
+    "character": "Breaker",
+    "identity_lock": true,
+
+         
+    "height": "6 ft 6 in",
+    "build": "compact, athletic",
+    "fur": "warm chestnut-brown",
+    "face": "youthful; bright, curious expression; NON-HUMAN SASQUATCH FEATURES",
+    "eyes": "hazel; quick darting focus",
+    "distinctives": [
+      "red baseball cap backward",
+      "rectangular glasses",
+      "headphones around neck",
+      "metal tech gauntlet on right forearm"
+    ],
+
+    "gear": [
+      "field notebook tucked at back pocket",
+      "gauntlet wrist LEDs"
+    ],
+
+    "demeanor": "eager, playful, kinetic; tinkerer energy",
+    "voice": "clear mid-range, airy",
+    "feet_morphology": "human-like, plantigrade: five toes, natural arch; heel-first contact",
+    "motivation": "To make a friendly, tech-savvy first impression on an audience he's excited but nervous to meet.",
+    "regional_tone": "en-US_light_southern"
+
+  },
+
+  "config": {
+    "duration": "8s",
+    "resolution": "3840x2160",
+    "fps": 60,
+
+    "aspect_ratio": "16:9"
+
+  },
+
+  "constraints": [
+    "The character's face MUST strictly remain non-human, consistent with a Bigfoot/Sasquatch as defined in the character sheet. Do not render a human face.",
+    "Do not render or burn-in subtitles, captions, lyrics, or any on-screen text.",
+    "No additional characters appear in frame.",
+    "Feet must be human-like, plantigrade (five toes, natural arch); no ape-like/digitigrade feet."
+
+  ],
+  "scene_number": "BR-2005",
+  "description": "Breaker's confidence is humorously checked as he nearly trips on a root, then uses the moment to laugh and talk about the clumsy Bigfoot seen in blurry photos.",
+  "setting": {
+    "location": "Moving back into a denser section of forest with a root-covered floor",
+    "time_of_day": "Blue-hour dusk",
+    "weather": "Calm, post-rain coolness",
+    "environment_details": "Floor is a tangle of old roots and moss; light is much lower here"
+  },
+  "subjects": [
+    {
+      "type": "character",
+      "character_id": "7330F811-F47F-41BC-A4FF-E792D073F41F",
+      "character_name": "Breaker",
+      "description": "6'6\" athletic Bigfoot; chestnut fur; red cap backward; rectangular glasses; headphones at neck; metal tech gauntlet (right)",
+      "action": "steps off the path, catches his toe on a root, stumbles forward, catches his balance, then looks to the camera and shakes his head with a laugh"
+    }
+  ],
+  "camera": {
+    "angle": "medium shot",
+    "motion": "following, then a quick, reactive jolt and tilt down as he stumbles, recovering as he does",
+    "lens": "35mm (FF equiv.)",
+    "position": "shoulder height (~1.6 m)",
+    "framing": "vlog-style reactive camerawork; captures the stumble authentically",
+    "cinematographer_intent": "To feel like a friendly documentarian capturing an authentic, slightly candid moment. The movement should feel natural and reactive."
+
+  },
+  "style": {
+    "keywords": [
+      "photorealistic",
+      "RED cinema camera",
+      "high dynamic range",
+      "subtle film grain",
+      "handheld aesthetic",
+      "no painterly stylization",
+      "tech surface realism (metal/LED)"
+    ]
+  },
+  "effects": [
+    "low light environment, mostly lit by soft ambient sky light from above",
+    "motion blur on the stumble to sell the sudden movement"
+  ],
+  "shots": [
+    {
+      "time": "0.0-1.5",
+      "framing": "medium follow",
+      "action": "Breaker turns from the trail and steps confidently into the darker woods",
+      "foley": "footfalls on dirt"
+    },
+    {
+      "time": "1.5-2.8",
+      "framing": "reactive jolt",
+      "action": "his foot catches a root; he lurches forward, arms flailing slightly to balance",
+      "camera": "jerks down and forward, mimicking a surprised camera operator",
+      "foley": "sharp scuff; grunt; heavy stumble"
+    },
+    {
+      "time": "2.8-4.0",
+      "framing": "re-stabilizing",
+      "action": "he plants his feet, recovering his balance and looking down at the root",
+      "camera": "steadies on him"
+    },
+    {
+      "time": "4.0-8.0",
+      "framing": "medium",
+      "action": "looks up at the lens, breaks into a wide grin, shakes his head, and delivers the line, ending with a chuckle",
+      "foley": "chuckle"
+    }
+  ],
+  "audio": {
+    "ambient": "damp forest hush, closer insect sounds",
+    "foley": "sharp scuff, stumble, grunt of surprise, fabric rustle, concluding with a light chuckle",
+    "score": "none",
+    "mix_notes": "the foley of the stumble should be prominent and slightly jarring, then settle back for the amused dialogue"
+  },
+  "performance": {
+    "speech": {
+      "character_id": "7330F811-F47F-41BC-A4FF-E792D073F41F",
+      "character_name": "Breaker",
+      "mode": "non_captionable",
+      "captions": false,
+      "audible": true,
+      "script_type": "ipa",
+      "time": "4.5-8.0",
+      "content": "…æn ðɛn ðɛɹ ɑɹ ði ˈʌðəɹ ɡaɪz. jæ. ðɛmz ðə wʌnz ɪn ðə ˈblɜɹi ˈfoʊtoʊz.",
+      "text": "...And THEN there are the other guys. Yeah. Them's the ones in the blurry photos.",
+      "subtext": "Simple and friendly. Breaker is pumped that his introduction wasn't as bad as he thought it would be."
+    },
+    "lip_sync_hint": "eyes wide with feigned shock after the stumble, then crinkling with laughter on the line.",
+    "speech_pacing": 0.88,
+    "regional_tone": "en-US_light_southern"
+  },
+
+  "render_hints": {
+    "skin_fur_shading": "microfibers with cool top-light; gauntlet metal brushed anisotropy",
+    "shadow_handling": "lift mids to keep eye detail under cap brim",
+    "grain": "fine, filmic",
+    "sharpness": "natural (no haloing)",
+    "compression": "preserve fine fur and fern edges",
+    "motion_blur": "subtle; shoulder-cam feel",
+    "anti_painterly_strength": 0.9,
+
+    "text_overlays": "none",
+    "burn_in_subtitles": false,
+
+    "generate_caption_file": false
+
+  }
+
+}

@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VideoAI Drop-In Clip (Reduced)",
+  "type": "object",
+  "required": [
+    "meta",
+    "character_sheet",
+    "config",
+    "constraints",
+    "scene_number",
+    "description",
+    "setting",
+    "subjects",
+    "camera",
+    "style",
+    "shots",
+    "audio",
+    "performance",
+    "render_hints"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "title",
+        "project"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "project": {
+          "type": "string"
+        },
+        "identity_lock": {
+          "type": "boolean"
+        },
+        "breadcrumbs": {
+          "type": "object",
+          "properties": {
+            "origin": {
+              "type": "string"
+            },
+            "next": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "character_sheet": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "demeanor": {
+          "type": "string"
+        },
+        "voice": {
+          "type": "string"
+        },
+        "speech_pacing": {
+          "type": "number"
+        },
+        "regional_tone": {
+          "type": "string"
+        }
+      }
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "duration",
+        "resolution",
+        "fps",
+        "aspect_ratio"
+      ]
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scene_number": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "setting": {
+      "type": "object",
+      "required": [
+        "location",
+        "time_of_day"
+      ]
+    },
+    "subjects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "id",
+          "description",
+          "action"
+        ]
+      }
+    },
+    "camera": {
+      "type": "object",
+      "required": [
+        "angle",
+        "motion",
+        "lens",
+        "position",
+        "framing"
+      ]
+    },
+    "style": {
+      "type": "object"
+    },
+    "shots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "time",
+          "framing",
+          "action"
+        ]
+      }
+    },
+    "audio": {
+      "type": "object"
+    },
+    "performance": {
+      "type": "object"
+    },
+    "render_hints": {
+      "type": "object"
+    }
+  }
+}

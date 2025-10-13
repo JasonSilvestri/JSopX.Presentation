@@ -1,0 +1,28 @@
+{
+  "name": "twbs/bootstrap",
+  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "keywords": [
+    "css",
+    "js",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "https://getbootstrap.com/",
+  "authors": [
+    {
+      "name": "Jason Silvestri",
+      "email": "therealjasonsilvestri@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/JasonSilvestri/JSopX.OpenProjectX/issues"
+  },
+  "license": "MIT",
+  "replace": {
+    "twitter/bootstrap": "self.version"
+  }
+}

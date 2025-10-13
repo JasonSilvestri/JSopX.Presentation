@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Expander JSON-Lock v2 (Reduced)",
+  "type": "object",
+  "required": [
+    "expander_id",
+    "version",
+    "applies_to",
+    "carry_over",
+    "gatekeepers",
+    "autofill",
+    "expansion_inputs_schema"
+  ],
+  "properties": {
+    "expander_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "applies_to": {
+      "type": "object",
+      "required": [
+        "project"
+      ],
+      "properties": {
+        "project": {
+          "type": "string"
+        },
+        "character_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "identity_lock": {
+          "type": "boolean"
+        }
+      }
+    },
+    "carry_over": {
+      "type": "object"
+    },
+    "gatekeepers": {
+      "type": "object"
+    },
+    "autofill": {
+      "type": "object"
+    },
+    "drift_guards": {
+      "type": "object"
+    },
+    "speech_rules": {
+      "type": "object"
+    },
+    "camera_rules": {
+      "type": "object"
+    },
+    "environment_rules": {
+      "type": "object"
+    },
+    "expansion_inputs_schema": {
+      "type": "object"
+    }
+  }
+}

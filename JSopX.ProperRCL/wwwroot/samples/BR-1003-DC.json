@@ -1,0 +1,207 @@
+{
+
+  "meta": {
+    "title": "Breaker — Trail Tech Intro Three (Director's Cut)",
+    "project": "The Official Bigfoot Vlog",
+    "project_id": "9c5907d6-f88e-4812-9b37-87686525e067",
+    "identity_lock": true,
+
+    "author": "Jason Silvestri",
+    "co_authors": "Lumina, Gemini",
+    "inventor": "This video text prompt format was invented by Jason Silvestri",
+    "copyright": "(c) 2024 Jason Silvestri"
+
+  },
+
+  "character_sheet": {
+    "id": "1e439563-f206-470b-836d-5edc30302504",
+    "name": "Breaker",
+    "height": "6 ft 6 in",
+    "build": "compact, athletic",
+    "fur": "warm chestnut-brown",
+    "face": "youthful; bright, curious expression; NON-HUMAN SASQUATCH FEATURES",
+    "eyes": "hazel; quick darting focus",
+    "distinctives": [
+      "red baseball cap backward",
+      "rectangular glasses",
+      "headphones around neck",
+      "metal tech gauntlet on right forearm"
+    ],
+
+    "gear": [
+      "field notebook tucked at back pocket",
+      "gauntlet wrist LEDs"
+    ],
+
+    "demeanor": "eager, playful, kinetic; tinkerer energy",
+    "voice": "clear mid-range, airy",
+    "feet_morphology": "human-like, plantigrade: five toes, natural arch; heel-first contact",
+    "motivation": "To make a friendly, tech-savvy first impression on an audience he's excited but nervous to meet.",
+    "regional_tone": "en-US_light_southern"
+
+  },
+
+  "config": {
+    "duration": "8s",
+    "resolution": "3840x2160",
+    "fps": 60,
+
+    "aspect_ratio": "16:9"
+
+  },
+
+  "constraints": [
+    "The character's face MUST strictly remain non-human, consistent with a Bigfoot/Sasquatch as defined in the character sheet. Do not render a human face.",
+    "Do not render or burn-in subtitles, captions, lyrics, or any on-screen text.",
+    "No additional characters appear in frame.",
+    "Feet must be human-like, plantigrade (five toes, natural arch); no ape-like/digitigrade feet."
+
+  ],
+
+  "scene_number": "BR-1003-DC",
+  "description": "On a fern-lined logging trail at blue-hour, Breaker jogs in, quick-scans with his gauntlet, and introduces himself with a grin, trying to seem cool and collected.",
+  "setting": {
+    "location": "Abandoned logging road, soft dirt with ferns",
+    "time_of_day": "Blue-hour dusk",
+    "weather": "Calm, post-rain coolness",
+    "environment_details": "Moist air haze; distant creek; occasional fireflies; wet leaf sheen",
+    "sensory_details": [
+      "the scent of damp earth and pine",
+      "the crisp chill of evening air"
+    ]
+
+  },
+
+  "subjects": [
+
+    {
+
+      "type": "character",
+      "id": "1e439563-f206-470b-836d-5edc30302504",
+      "description": "6'6\" athletic Bigfoot; chestnut fur; red cap backward; rectangular glasses; headphones at neck; metal tech gauntlet (right)",
+      "action": "jogs into frame, raises gauntlet for a quick scan, glances to lens with a grin, speaks, then playful tap to cap brim"
+
+    }
+
+  ],
+
+  "camera": {
+    "angle": "medium following → medium-close",
+    "motion": "gentle handheld follow from ~2 m back; settle to quasi-static on delivery",
+    "lens": "28mm (FF equiv.)",
+    "position": "shoulder height (~1.6 m)",
+    "framing": "trail leading lines; ferns FG parallax; fireflies intermittent",
+    "cinematographer_intent": "To feel like a friendly documentarian capturing an authentic, slightly candid moment. The movement should feel natural and reactive."
+
+  },
+
+  "style": {
+    "keywords": [
+
+      "photorealistic",
+      "RED cinema camera",
+      "high dynamic range",
+      "subtle film grain",
+      "natural lens breathing",
+      "no painterly stylization",
+      "tech surface realism (metal/LED)"
+
+    ]
+
+  },
+
+  "effects": [
+
+    "cool blue-hour top light with soft fill",
+    "gauntlet HUD glow reflected in glasses; two fireflies cross foreground"
+
+  ],
+
+  "shots": [
+
+    {
+
+      "time": "0.0-2.0",
+      "framing": "medium follow",
+      "action": "Breaker jogs in; tiny splash through shallow puddle; headphones bounce",
+      "foley": "soft jog footfalls; damp leaf flick; fabric/fur shift"
+
+    },
+
+    {
+
+      "time": "2.0-3.6",
+      "framing": "medium",
+      "action": "raises gauntlet; quick scan sweep; LEDs tick",
+      "camera": "ease to a stable hold"
+
+    },
+
+    {
+
+      "time": "3.6-6.6",
+      "framing": "medium-close",
+      "action": "Breaker locks eyes to lens, parks stance, delivers line with bright grin",
+      "camera": "micro push-in for delivery"
+
+    },
+
+    {
+
+      "time": "6.6-8.0",
+      "framing": "hold medium-close",
+      "action": "drops gauntlet; playful two-finger tap to cap brim backward; short chuckle",
+      "fx": "two fireflies streak past foreground"
+
+    }
+
+  ],
+
+  "audio": {
+    "ambient": "distant creek; damp forest hush; a few night insects starting",
+    "foley": "soft jog footfalls; puddle splash; gauntlet servo whirr and LED clicks; cap brim tap",
+    "score": "none",
+    "mix_notes": "keep speech forward and clean; ambience ~-14 LUFS relative; minimal reverb"
+
+  },
+
+  "performance": {
+    "speech": {
+      "character": "1e439563-f206-470b-836d-5edc30302504",
+      "mode": "non_captionable",
+      "captions": false,
+
+      "audible": true,
+
+      "script_type": "ipa",
+      "time": "4.0-6.6",
+      "content": "dʒʌst ˈkæləˌbɹeɪtɪn ðə oʊl ˈdʒioʊˌskænɚ. kænt bi tu ˈkɛɹfəl aʊt hɪɹ!",
+      "text": "Just calibrating the old geoscanner. Can't be too careful out here!",
+      "subtext": "Okay, here we go. Be cool. This is the first thing they'll see. Just be yourself. I hope they think the gauntlet is cool."
+
+    },
+
+    "lip_sync_hint": "easy smile on 'guys'; clear alveolar on 'geoscanner'; brief jaw relax after ellipsis.",
+    "speech_pacing": 0.88,
+
+    "regional_tone": "en-US_light_southern"
+
+  },
+
+  "render_hints": {
+    "skin_fur_shading": "microfibers with cool top-light; gauntlet metal brushed anisotropy",
+    "shadow_handling": "lift mids to keep eye detail under cap brim",
+    "grain": "fine, filmic",
+    "sharpness": "natural (no haloing)",
+    "compression": "preserve fine fur and fern edges",
+    "motion_blur": "subtle; shoulder-cam feel",
+    "anti_painterly_strength": 0.9,
+
+    "text_overlays": "none",
+    "burn_in_subtitles": false,
+
+    "generate_caption_file": false
+
+  }
+
+}

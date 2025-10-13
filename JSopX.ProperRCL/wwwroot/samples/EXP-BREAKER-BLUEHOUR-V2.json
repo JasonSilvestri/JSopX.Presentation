@@ -1,0 +1,105 @@
+{
+  "expander_id": "EXP-BREAKER-BLUEHOUR-V2",
+  "version": 2,
+  "applies_to": {
+    "project": "The Official Bigfoot Vlog",
+    "identity_lock": true,
+    "character_ids": [
+      "477c2cc6-3b2a-47e6-b991-66c830d32844"
+    ]
+  },
+  "carry_over": {
+    "style_hash": true,
+    "environment_hash": true,
+    "camera_hash": true,
+    "render_hints": true,
+    "audio_bed": true,
+    "constraints": true,
+    "feet_morphology": true
+  },
+  "gatekeepers": {
+    "max_scene_delta": "minor",
+    "max_dialogue_sec": 3.2,
+    "allow_new_characters": false,
+    "allow_logo_text": false,
+    "pacing_lock": [
+      0.86,
+      0.9
+    ],
+    "regional_tone_lock": "en-US-NewEngland",
+    "speech_anchor_lock": "mid_action"
+  },
+  "autofill": {
+    "duration": "8s",
+    "fps": 60,
+    "resolution": "3840x2160",
+    "aspect_ratio": "16:9",
+    "anti_painterly_strength": 0.9,
+    "grain": "fine filmic"
+  },
+  "drift_guards": {
+    "required_phrases_in_description": [
+      "blue-hour",
+      "post-rain",
+      "fireflies",
+      "handheld float"
+    ],
+    "hard_denies": [
+      "dog",
+      "wolf",
+      "ape-like feet",
+      "helmet",
+      "city street",
+      "stage logo"
+    ],
+    "id_reset_on_bad_render": true
+  },
+  "speech_rules": {
+    "script_type": "ipa",
+    "max_syllables": 28,
+    "fallback_alt_lines": 2,
+    "prosody": {
+      "nonrhotic_bias": 0.4,
+      "consonant_clip": 0.2
+    }
+  },
+  "camera_rules": {
+    "default_lens": "35mm",
+    "move_profile": "low-rise\u2192eye-level follow",
+    "micro_push_in_ok": true,
+    "max_new_move": "10%"
+  },
+  "environment_rules": {
+    "time_of_day_strict": "blue-hour dusk",
+    "fog_density_variation": "\u00b18%",
+    "light_temperature_variation": "\u00b1150K"
+  },
+  "expansion_inputs_schema": {
+    "type": "object",
+    "required": [
+      "scene_number",
+      "dialogue_ipa"
+    ],
+    "properties": {
+      "scene_number": {
+        "type": "string",
+        "pattern": "^BR-\\d{4}[A-Z]?$"
+      },
+      "beat_note": {
+        "type": "string"
+      },
+      "micro_action": {
+        "type": "string"
+      },
+      "dialogue_ipa": {
+        "type": "string"
+      },
+      "lip_sync_hint": {
+        "type": "string"
+      },
+      "audio_mix_note": {
+        "type": "string"
+      }
+    }
+  }
+}
