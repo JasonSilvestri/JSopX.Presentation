@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
 
     <!-- Makes your static web assets appear under /_content/jsopx.proper/... -->
-    <StaticWebAssetBasePath>jsopx.proper</StaticWebAssetBasePath>
+    <!--<StaticWebAssetBasePath>jsopxproper</StaticWebAssetBasePath>-->
     <Title>JSopX™ - Presentation Proper RCL (v1)</Title>
     <Authors>Jason Silvestri</Authors>
     <Company>JSopX™</Company>

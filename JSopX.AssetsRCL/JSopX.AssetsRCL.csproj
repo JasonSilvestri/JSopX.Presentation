@@ -5,11 +5,11 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <!-- Makes your static web assets appear under /_content/jsopx.lazy/... -->
-    <StaticWebAssetBasePath>jsopx.assets</StaticWebAssetBasePath>
+    <!--<StaticWebAssetBasePath>jsopx.assets</StaticWebAssetBasePath>-->
     <Title>JSopX™ - Presentation Assets RCL (v1)</Title>
     <Authors>Jason Silvestri</Authors>
     <Company>JSopX™</Company>
-    <Description>JSopX™ - Presentation Assets RCL (v1), codename, JSopX.LazyRCL, is a Cross-Platform Prototype Razor Class Library for JSopX™ Open Project EXperience User Production Environment.</Description>
+    <Description>JSopX™ - Presentation Assets RCL (v1), codename, JSopX.AssetsRCL, is a Cross-Platform Prototype Razor Class Library for JSopX™ Open Project EXperience User Production Environment.</Description>
     <Copyright>Copyright © 2025 – All Rights Reserved by Jason Silvestri</Copyright>
     <PackageProjectUrl>https://jsopx.com/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/JasonSilvestri/JSopX.Presentation.git</RepositoryUrl>

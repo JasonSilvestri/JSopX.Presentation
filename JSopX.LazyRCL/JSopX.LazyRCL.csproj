@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
         <!-- Makes your static web lazy appear under /_content/jsopx.lazy/... -->
-        <StaticWebAssetBasePath>jsopx.lazy</StaticWebAssetBasePath>
+        <!--<StaticWebAssetBasePath>jsopx.lazy</StaticWebAssetBasePath>-->
         <Title>JSopX™ - Presentation Lazy RCL (v1)</Title>
         <Authors>Jason Silvestri</Authors>
         <Company>JSopX™</Company>
