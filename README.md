@@ -1,361 +1,166 @@
-# <img src="https://github.com/JasonSilvestri/JSopX.BridgeTooFar/blob/master/JSopX.BridgeTooFar/doc-assets/jsopx-react-core-logo.svg" style="width: 28px; height: auto; padding-right:12px;!important;"> JSopX™ Presentation Project
+# JSopX™ — Video Ai Prompt Studio Project (v1)
 
-The **JSopX™ Presentation Project** is a **FREE**, open-source demonstration project built in Visual Studio, _code named_, `JSopX.Presentation`. It showcases the transformation of an existing React and ASP.NET Core application—complete with its own assets, Web APIs, and standards—into a scalable solution for optimal enterprise application migration.
-
----
-
-## **Use Latest Variant:**
-
-> [!TIP]
-> You are currently viewing the **"_Use Latest_" _Variant_** of the **JSopX™ Presentation Project**. 
-> 
-> For more details, see [Getting Started](#getting-started) _below_.
+**VideoAiPromptStudio Project (v1)**, codename, `JSopX.VideoAiPromptStudio`, 
+ASP.NET Core 9 (Razor Pages) workbench for **Video-AI Prompt** authoring, validation, and packing.
+Keeps seeds, expanders, anchors, and IPA helpers in one place with schema validation to reduce drift.
 
 ---
 
 ```bash
-# For The Cool Kids: Clone JSopX.Presentation Git Repository
-$ git clone https://github.com/JasonSilvestri/JSopX.Presentation.git
+# For The Cool Kids: Clone JSopX.VideoAiPromptStudio Git Repository
+$ git clone https://github.com/JasonSilvestri/JSopX.VideoAiPromptStudio.git
 ```
 
 ---
 
-[`Home`](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ReactCore/README.md)
+**[`Home`](../README.md)** » [`Briefing`](#) » [`Step-by-Step`](#)
 
 ---
 
+### **BETA:**
 
-## Table of Contents  
+> [!WARNING]
+> You are currently viewing the **"_BETA_" v 1 _Variant_** of this **`JSopX.VideoAiPromptStudio` Project**.
 
- - [Overview](#overview)
-  - [Prerequisites](#prerequisites)
-  - [Corequisites](#corequisites)
-  - [Business Concerns Addressed](#business-concerns-addressed)
-      - [Step 1: Clone the Repository](#step-1-clone-the-repository)
-      - [Step 2: Open the Solution](#step-2-open-the-solution)
-      - [Step 3: Configure the Project](#step-3-configure-the-project)
-      - [Step 4: Build and Run](#step-4-build-and-run)
-      - [Step 5: Project File Structure](#step-5-project-file-structure)
-      - [Step 6: Project References & Dependencies](#step-6-jsopx-project-references--dependencies)
-      - [Step 7: Usage](#step-7-usage)
-      - [Step 8: Extended Usage](#step-8-extended-usage)
-  - [Next Steps](#next-steps)
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Prerequisites](#prerequisites)
+- [Problem Statement — Major Concerns Addressed](#problem-statement--major-concerns-addressed)
+- [Goals & Non-Goals](#goals--non-goals)
+- [Architecture Summary](#architecture-summary)
+- [Key Components](#key-components)
+- [Platform Scope (v1)](#platform-scope-v1)
+- [Repository File Structure](#repository-file-structure)
+- [Clone `JSopX.VideoAiPromptStudio` Git Repository](#clone-selfhealthml-git-repository)
+  - [Option 1: Using `Bash`](#option-1-using-bash)
+  - [Option 2: Using `Powershell`](#option-2-using-powershell)
+  - [Option 3: Using `Node` or `npm` (degit)](#option-3-using-node-or-npm-degit)
+  - [Open the Visual Studio Solution](#open-the-visual-studio-solution)
+- [Configure the Project](#configure-the-project)
+  - [Ensure Dependencies Are Restored](#ensure-dependencies-are-restored)
+  - [Verify Nuget Packages](#verify-nuget-packages)
+- [Be Sure to Build and Run](#be-sure-to-build-and-run)
+- [License / Ownership](#license--ownership)
 
 ---
 
 ## Overview
 
-The **JSopX™ Presentation Project** is a **FREE**, open-source demonstration project built in Visual Studio, _code named_, `JSopX.Presentation`. It showcases the transformation of an existing React-based client-side project that demonstrates the flexibility and component-driven approach of React, working in harmony with ASP.NET Core services—complete with its own assets, Web APIs, and standards—into a scalable solution for optimal enterprise application migration.
-
-By aligning varied frameworks—ranging from [ASP.NET Core](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.AspNetCore/README.md) to [Angular](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.AngularCore/README.md), [Vue](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.VueCore/README.md), [React](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ReactCore/README.md), [Blazor](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.BlazorServerCore/README.md), [MAUI](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.MauiHybridNetCore/README.md) and more, all using the same [Web API](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.WebAPI/README.md), [assets](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.RCLxProper/README.md), [documentation](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.BridgeTooFar/README.md), and [standards](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Introduction/JSopxDevelopmentStandards.md)—these projects create a consistent development landscape where code can be shared, extended, and integrated seamlessly, bridging-of-the-critical-gap, between front-end dynamism and back-end security. 
-
-The result is an environment that transforms a patchwork of independent solutions into a cohesive enterprise ecosystem, making collaboration smoother and long-term maintenance more manageable. As you delve deeper, you’ll discover how each project type fits into this grand tapestry, ensuring uniform standards while preserving the flexibility needed to evolve and adapt.
+The **JSopX™ `VideoAiPromptStudio` Validator** is the first of its kind.
 
 ---
 
-## Current Phase
+## Prerequisites
 
-> [!CAUTION]
->
->**Phases 1**: This document is currently aligned with [Phase 1: Minimum Viable Product (MVP)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Phases/Phase-1.md) Business Requirements. 
-> 
+To build and run most projects found across **JSopX™** repositories, ensure the following technologies and IDEs are installed:
 
----
+- [Visual Studio (v 17.14.14)](https://visualstudio.microsoft.com/)  
+- [.NET Framework (v 9.0.1)](https://dotnet.microsoft.com/)  
+- [ASP.NET Core (v 9.0.1)](https://dotnet.microsoft.com/)  
+- [.NET MAUI (v 9.0.1)](https://learn.microsoft.com/dotnet/maui/)  
+- [Node.js (v 20.14.0)](https://nodejs.org/)  
+- [npm (v 10.8.1)](https://www.npmjs.com/)  
+- [Bash (v 5.x+)](https://www.gnu.org/software/bash/)  
+- [PowerShell (v 7.x+)](https://learn.microsoft.com/powershell/)  
 
-## **Prerequisites**
-
-Be sure each technology is installed, with proper versioning, if your goal is to continue exploring and/or installing just the `JSopX.Presentation` Project.
-
-- [Visual Studio (v 17.13.6)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ReactCore/p1/v1/Technologies/#visual-studio)
-- [.NET Framework (v 9.0.1)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ReactCore/p1/v1/Technologies/#net-framework)
-- [ASP.NET Core (v 9.0.1)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.ReactCore/p1/v1/Technologies/#aspnet-core)
+[`⇧ Back to Top`](#table-of-contents)  
 
 ---
 
-## **Getting Started**
+## Platform Scope (v1)
+ASP.NET Core 9 (Razor Pages) workbench for **Video-AI Prompt** authoring, validation, and packing.
+Keeps seeds, expanders, anchors, and IPA helpers in one place with schema validation to reduce drift.
 
-Carefully _choose_ the variant approach below that fits your current objective:
-
----
-
-## **Step 1: Clone the Repository**
-
-_Clone_ the `JSopX.Presentation` GitHub Repository if you plan to explore it independently from the rest of the projects.
-
-Choose the approach below that fits your environment:  
-
-- **[Bash](#step-11-using-bash)** → Ideal for **Linux, macOS, and Windows (WSL/Git Bash)** users.  
-- **[PowerShell](#step-12-using-powershell)** → Best for **Windows** users.  
-- **[Node.js](#step-13-using-nodejs-or-npm-degit)** → A lightweight option for developers using **JavaScript-based workflows**.  
+[`⇧ Back to Top`](#table-of-contents)  
 
 ---
-
-### **Step 1.1: Using `Bash`:**
- 
-```bash
-
- # Using Bash: Clone JSopX.Presentation Git Repository
-
- # 1. Navigate to the desired local directory where you plan to clone the repository
- cd path\to\local\repo\JasonSilvestri\JSopX.Presentation
-
- # 2. Clone JSopX.Presentation Git Repository       
- git clone https://github.com/JasonSilvestri/JSopX.Presentation.git
-    
-```
-
-[`Back to Top`](#table-of-contents)
-
----
-
-### **Step: 1.2: Using `Powershell`:**
-
-```powershell
-
- # Using PowerShell: Clone JSopX.Presentation Git Repository
-
- # 1. Navigate to the desired local directory where you plan to clone the repository
- cd path\to\local\repo\JasonSilvestri\JSopX.Presentation
-
- # 2. Clone JSopX.Presentation Git Repository       
- git clone https://github.com/JasonSilvestri/JSopX.Presentation.git
-    
-```
-
-[`Back to Top`](#table-of-contents)
-
----
-
-### **Step: 1.3: Using `Node.js` or `npm` (degit):**
- 
-```shell
-
- # Using Node.js / npm : Clone JSopX.Presentation Git Repository
- # 1. Navigate to the desired local directory where you plan to clone the repository
- cd path\to\local\repo\JasonSilvestri\JSopX.Presentation
-    
- # 2. Using npx degit to clone without .git history
- npx degit https://github.com/JasonSilvestri/JSopX.Presentation
-
-```
-
-[`Back to Top`](#table-of-contents)
-
----
-
-## **Step 2: Open the Solution**
-
-Working with the `JSopX.Presentation` Project in Visual Studio is simple enough.
-
-1. Launch **[Visual Studio (v 17.13.6)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#visual-studio)**.
-2. Open the solution file: `JSopX.Presentation.sln`.
-
-[`Back to Top`](#table-of-contents)
-
----
-
-## **Step 3: Configure the Project**
-
-> [!TIP]
->
-> Latest versions of [Visual Studio](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#visual-studio) performs this step regularly, dropping and restoring project dependencies, nuget packages and other resources between builds automatically (*by design*). Still, it is good practice to at least be aware of the commands outlined in this step.
-> 
-
----
-
-### **Step: 3.1: Ensure Dependencies Are Restored:**
-
-Ensure `JSopX.Presentation` Project dependencies are restored:
-
-   ```bash
-   npm install
-   ```
-
-
-[`Back to Top`](#table-of-contents)
-
----
-
-### **Step: 3.2: Verify Nuget Packages:**
-
-Verify that all NuGet packages are up to date:
-
-   ```bash
-   dotnet restore
-   ```
-   
-[`Back to Top`](#table-of-contents)
-
----
-
-## **Step 4: Be Sure to Build and Run**
-
-Building and Running the `JSopX.Presentation` Project in Visual Studio is also another simple task.
-
-### **Step: 4.1: Build and Run**:
-
-1. Build the solution in [Visual Studio](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#visual-studio).
-2. Run the project:
-   - Use the **IIS Express** profile for local development.
-
----
-
-### **Step: 4.2: And Now Your Done**:
-
-Assuming the `JSopX.Presentation` Project is running as expected, **you are now done** with the **installation** and **execution** of the project!
-
-[`Back to Top`](#table-of-contents)
-
----
-
-## **Step 5: Project File Structure**
 
 ### 🎯 **DRIFT ALERT**:
 
 > [!CAUTION]
-> Jason recently discovered that _**many**_ of the final iterations of `validation` and `package` scripts recently created (and required) to conclude units-of-work in projects just like this one, often end up drifting to a point of no return. 
->
-> It's suspected there is a confusion of project and solution paths, with respects to Visual Studio projects in specific, resulting in script test failing. This includes most **`Node`**, **`powershell`**,  **`yaml`**, etc.
+> Jason recently discovered that many of the final iterations of validation and package scripts recently created (and required) to conclude units of work in projects just likd this one, often end up drifting to a point of no return, due to a confusion of project and solution paths, with respects to Visual Studio projects in specific, resulting into scripts failing. This includes most **`Node`**, **`powershell`**,  **`yaml`**, etc.
 
 ---
 
-The `JSopX.Presentation` Project in particular, contains several files and directories, all with their own functionality & purpose for existing. 
-
-For brevity, samples will not have the complete file structure you get when installing, but there are some core files and directories that have special consideration you should get to know. 
-
----
-
-### **Step: 5.1: Most Common Solution & Project Naming Convention**:
-
-All `JSopX™ projects` follow a consistent directory structure. 
-
-The **most common** `JSopX™ Visual Studio Projects` that tend to have **no more than one** child project, typical uses the following naming convention:
-- `JSopX.<solution>` with its own folder and `.sln` solution file, 
-- Followed by a sub `JSopX.<project>` folder and `.csproj` project file with the same name.
-   
-   **For Example**:
- 
-    ```text
-    # The most common JSopX™ projects
-
-    JSopX.<Solution>/                # Root JSopX Visual Studio Solution folder (Repository Root).
-    ├── JSopX.<Solution>.sln         # Visual Studio solution file for Presentation.
-    ├── JSopX.<Project>/             # ASP.NET Core Razor Class Library for raw assets folder.
-    │   ├── JSopX.<Project>.csproj   # Visual Studio Project configuration file.
-    ```
----
-
-### **Step: 5.2: `JSopX.Presentation` Project Naming Convention**:
-
-The `JSopX.Presentation` Project naming convention uses:
- - The `JSopX.<solution>` with its own folder and `.sln` solution file, 
- - followed by several sub `JSopX.<project>` folders and `.csproj` project files with different names. 
-   
-**For Example**:
- 
-At the highest level, a common, plain-text file folder structure of the `JSopX.Presentation` Solution and Projects should look something like what follows:
+## Repository File Structure
 
 ```text
-# JSopX™ Presentation Solution and Projects
 
-JSopX.Presentation/              # Root JSopX.Presentation Visual Studio Solution folder (Repository Root).
-├── JSopX.Presentation.sln       # Visual Studio solution file for Presentation.
-├── JSopX.AssetsRCL/             # ASP.NET Core Razor Class Library for raw assets folder.
-│   ├── JSopX.AssetsRCL.csproj   # Visual Studio Project configuration file.
-├── JSopX.LazyRCL/               # ASP.NET Core Razor Class Library for raw assets folder.
-│   ├── JSopX.LazyRCL.csproj     # Visual Studio Project configuration file.
-├── JSopX.ProperRCL/             # ASP.NET Core Razor Class Library for raw assets folder.
-│   ├── JSopX.ProperRCL.csproj   # Visual Studio Project configuration file.
+VideoAiPromptStudio/
+├─ README.md
+├─ .editorconfig
+├─ .gitattributes
+├─ .gitignore
+├─ global.json                # pin SDK if you want
+├─ VideoAiPromptStudio.sln
+│  ├─ Prompt.Core/
+│  │  ├─ Prompt.Core.csproj
+│  │  ├─ Models/             # C# POCOs mirroring schemas
+│  │  ├─ Services/
+│  │  │  ├─ PromptValidator.cs
+│  │  │  ├─ BreadcrumbService.cs
+│  │  │  ├─ IdentityLockService.cs
+│  │  │  └─ IpaTranscoder.cs
+│  │  └─ Util/JsonOptions.cs
+│  ├─ Prompt.Cli/
+│  │  ├─ Prompt.Cli.csproj
+│  │  └─ Program.cs          # spectre.console CLI (validate, pack, expand, scaffold)
+│  └─ Prompt.Tests/
+│     ├─ Prompt.Tests.csproj
+│     └─ ValidatorTests.cs
+├─ schemas/
+│  ├─ clip.schema.json        # Core “Drop-In Clip” (Flow/Veo)
+│  ├─ expander.schema.json    # JSON-Lock v2 expander object
+│  ├─ expand-input.schema.json
+│  ├─ anchors.schema.json
+│  └─ packs.schema.json       # collections: ExpandPacks, StylePacks
+├─ projects/
+│  ├─ self-health/
+│  │  ├─ anchors/
+│  │  │  ├─ self-health-logo-black.svg
+│  │  │  ├─ self-health-logo-black-fill.svg
+│  │  │  ├─ self-health-logo-veo-prompt-splash.png
+│  │  │  ├─ self-health-logo-veo-prompt-splash.svg
+│  │  │  └─ self-health-logo-veo-prompt-splash.webp
+│  │  ├─ clips/
+│  │  │  ├─ JAS-1000.seed.json
+│  │  │  └─ JAS-1001A.example.json
+│  │  └─ expanders/
+│  │     └─ EXP-JASON-OFFICE-V1.json
+│  └─ bigfoot-vlog/
+│     ├─ anchors/
+│     │  └─ townhall.jpeg
+│     ├─ clips/
+│     │  ├─ BR-1000.seed.json
+│     │  └─ BR-1001B.river.json
+│     └─ expanders/
+│        └─ EXP-BREAKER-BLUEHOUR-V1.json
+├─ packs/
+│  ├─ styles/
+│  │  └─ RED-filmgrain-bluehour.json
+│  ├─ expand/
+│  │  └─ EXP-templates.index.json
+│  └─ speech/
+│     ├─ ipa-English-map.csv  # your hand-curated IPA↔︎English hints
+│     └─ regional-tones.json  # “en-US-NewEngland”, etc.
+├─ tools/
+│  └─ scripts/
+│     ├─ validate.ps1
+│     ├─ pack.ps1
+│     └─ ids.ps1             # UUID mint + breadcrumb helpers
+└─ .github/workflows/
+   └─ validate.yml
 
-```
-
-> There are a few reasons why I do this, but the primary reason is ensuring references are managed effectively and circular dependencies are avoided.
-
-[`Back to Top`](#table-of-contents)
-
----
-
-### **Step: 5.2: Structured File Tree**:
-
-A common, plain-text file structure of the `JSopX.Presentation` Project files and directories that matter.
-
-```plaintext
-# JSopX™ Presentation Project
-
-JSopX.Presentation/              # Root JSopX.Presentation Visual Studio Solution folder (Repository).
-├── .gitattributes               # Git attributes file for repository metadata and configurations.
-├── .gitignore                   # GitHub Specifies files and directories to ignore in version control.
-├── JSopX.Presentation.sln       # Visual Studio solution file for Presentation.
-├── LICENSE.txt                  # GitHub Licensing information for the project.
-├── README.md                    # High-level project documentation (you are here!).
-├── JSopX.AssetsRCL/             # Primary ASP.NET Core Razor Class Library project directory for raw assets.
-│   ├── JSopX.AssetsRCL.csproj   # Visual Studio Project configuration file.
-├── JSopX.LazyRCL/               # Primary ASP.NET Core Razor Class Library project directory for overabundance of raw assets folder, bootstrap icons, examples, etc.
-│   ├── JSopX.LazyRCL.csproj     # Visual Studio Project configuration file.
-├── JSopX.ProperRCL/             # Primary ASP.NET Core Razor Class Library project directory for light-weight, production-ready version of required RCL assets.
-│   ├── JSopX.ProperRCL.csproj   # Visual Studio Project configuration file.
-
-```
-
----
-
-### **Step: 5.3: Local Repository Locations**:
-
-**`JSopX.Presentation` Solution**:
-
-```
-JSopX.Presentation: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.Presentation.sln.
-```
-
-**`JSopX.Presentation` Projects**:
-
-```
-JSopX.AssetsRCL: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.ProperRCL\JSopX.AssetsRCL.csproj.
-JSopX.LazyRCL: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.LazyRCL\JSopX.LazyRCL.csproj.
-JSopX.ProperRCL: E:\All\Repos\JasonSilvestri\JSopX.Presentation\JSopX.LazyRCL\JSopX.ProperRCL.csproj.
-```
-
-**`JSopX.OpenProjectX` Enterprie Solution Git Tree**:
-> This `JSopX.OpenProjectX` enterprise solution has not yet incorporated the `JSopX.Presentation` project solution and child projects.
-
-```
-JSopX.OpenProjectX: E:\All\Repos\JasonSilvestri\JSopX.OpenProjectX\JSopX.OpenProjectX.sln.
 ```
 
 [`⇧ Back to Top`](#table-of-contents)  
 
 ---
 
-
-### **Step: 5.4: Github Repository Locations**:
-
-**`JSopX.Presentation` Solution**:
-
-```
-JSopX.Presentation: https://github.com/JasonSilvestri/JSopX.Presentation/blob/master/JSopX.Presentation.sln.
-```
-
-**`JSopX.Presentation` Projects**:
-
-```
-JSopX.AssetsRCL: https://github.com/JasonSilvestri/JSopX.Presentation/blob/master/JSopX.AssetsRCL/JSopX.AssetsRCL.csproj.
-JSopX.LazyRCL: https://github.com/JasonSilvestri/JSopX.Presentation/blob/master/JSopX.AssetsRCL/JSopX.LazyRCL.csproj.
-JSopX.ProperRCL: https://github.com/JasonSilvestri/JSopX.Presentation/blob/master/JSopX.AssetsRCL/JSopX.ProperRCL.csproj.
-```
-
-**`JSopX.OpenProjectX` Enterprie Solution Git Tree**:
-> This `JSopX.OpenProjectX` enterprise solution has not yet incorporated the `JSopX.Presentation` project solution and child projects.
-
-```
-https://github.com/JasonSilvestri/JSopX.OpenProjectX/blob/master/JSopX.OpenProjectX.sln.
-```
-
-[`⇧ Back to Top`](#table-of-contents)  
-
----
-
-### **Step: 5.5: Quick Start**:
-
+## Quick start
 1) Put JSON clips/expanders under `Projects/<project>/clips` and `Projects/<project>/expanders` (you can create these folders).
 2) Schemas live in `wwwroot/schemas`. The app validates JSON against these.
 3) Run the site, open `/Validate`, paste or upload JSON, pick a schema, and validate.
@@ -365,6 +170,160 @@ https://github.com/JasonSilvestri/JSopX.OpenProjectX/blob/master/JSopX.OpenProje
 
 ---
 
-##### [JSopX.com](https://www.jsopx.com/) | [Jason's Official Website](https://www.jsilvestri.com/) | [X](https://www.x.com/JasonSilvestri) | [LinkedIn](http://www.linkedin.com/in/JasonSilvestri) | [GitHub](https://github.com/JasonSilvestri) | [Gmail](mailto:therealjasonsilvestri@gmail.com) | [Phone : 508-851-9445](phoneto:508-851-9445)
+## Folders
+- `wwwroot/schemas` – JSON Schemas (clip, expander, anchors).
+- `Services` – JSON schema validator + helpers.
+- `Pages` – Razor Pages UI (`Index`, `Validate`).
 
-###### Copyright © 2025 - All Rights Reserved by Jason Silvestri
+[`⇧ Back to Top`](#table-of-contents)  
+
+---
+
+## Notes
+- This starter includes **reduced** schemas so you can get running now; expand them as needed.
+- Add your `READMEDISCOVERY.md` to the repo root to preserve the Gemini troubleshooting archive.
+
+[`⇧ Back to Top`](#table-of-contents)  
+
+---
+
+## **Clone `JSopX.VideoAiPromptStudio` Git Repository**
+
+Cloning a repository is straightforward, and it is really just a fancy way of saying, "_make a copy of the repository on your local machine._". 
+
+**_GitHub_**, **_Microsoft_**, **_Node_** and other third-party tools make this easy with built-in commands, you can call through one of their `cmd` prompt flavors.
+
+In fact, _you can Clone_ the **JSopX™** `JSopX.VideoAiPromptStudio` GitHub Repository in serveral ways.
+
+**Choose the approach below that fits your environment**:  
+
+1. **[Bash](#option-1-using-bash)** → Ideal for **Linux, macOS, and Windows (WSL/Git Bash)** users.  
+2. **[PowerShell](#option-2-using-powershell)** → Best for **Windows** users.  
+3. **[Node.js](#option-3-using-node-or-npm-degit)** → A lightweight option for developers using **JavaScript-based workflows**.  
+
+---
+
+### **Option 1: Using `Bash`:**
+ 
+Bash is a popular command-line shell and scripting language used in many operating systems, including Linux, macOS, and Windows (via WSL or Git Bash).
+
+```bash
+
+ # Using Bash: Clone JSopX.VideoAiPromptStudio Git Repository
+
+ # 1. Navigate to the desired local directory where you plan to clone the repository
+ cd path\to\local\repo\InCareSys\JSopX.VideoAiPromptStudio
+
+ # 2. Clone JSopX.VideoAiPromptStudio Git Repository       
+ git clone https://github.com/JasonSilvestri/JSopX.VideoAiPromptStudio.git
+    
+```
+
+[`Back to Top`](#clone-helix-git-repository)
+
+---
+
+### **Option 2: Using `Powershell`:**
+
+Powershell is a task automation and configuration management framework from Microsoft, consisting of a command-line shell and associated scripting language.
+
+
+```powershell
+
+ # Using PowerShell: Clone JSopX.VideoAiPromptStudio Git Repository
+
+ # 1. Navigate to the desired local directory where you plan to clone the repository
+ cd path\to\local\repo\InCareSys\JSopX.VideoAiPromptStudio
+
+ # 2. Clone JSopX.VideoAiPromptStudio Git Repository       
+ git clone https://github.com/JasonSilvestri/JSopX.VideoAiPromptStudio.git
+
+```
+
+[`Back to Top`](#clone-helix-git-repository)
+
+---
+
+### **Option 3: Using `Node` or `npm` (degit):**
+
+Use Node.js and npm with `degit` to clone the repository without its `.git` history. This is useful for starting fresh without any commit history. 
+
+```npm
+
+ # Using Node.js / npm : Clone JSopX.VideoAiPromptStudio Git Repository
+ # 1. Navigate to the desired local directory where you plan to clone the repository
+ cd path\to\local\repo\InCareSys\JSopX.VideoAiPromptStudio
+    
+ # 2. Using npx degit to clone without .git history
+ npx degit https://github.com/JasonSilvestri/JSopX.VideoAiPromptStudio
+
+```
+
+[`Back to Top`](#clone-helix-git-repository)
+
+---
+
+### **Open the Visual Studio Solution**
+
+Working with the `JSopX.VideoAiPromptStudio` Project in Visual Studio is simple enough.
+
+1. Launch **Visual Studio (v 17.14.14)**.
+2. Open the solution file: `JSopX.VideoAiPromptStudio.sln`.
+
+[`⇧ Back to Top`](#table-of-contents)
+
+---
+
+## **Configure the Project**
+
+> [!TIP]
+>
+> Latest versions of Visual Studio performs this step regularly, dropping and restoring project dependencies, nuget packages and other resources between builds automatically (*by design*). 
+> 
+> Still, it is good practice to be aware of the commands outlined in this step.
+> 
+
+---
+
+### **Ensure Dependencies Are Restored:**
+
+Ensure `JSopX.VideoAiPromptStudio` Project dependencies are restored:
+
+```bash
+ npm install
+```
+
+[`⇧ Back to Top`](#table-of-contents)
+
+---
+
+### **Verify Nuget Packages:**
+
+Verify that all NuGet packages are up to date:
+
+```bash
+ dotnet restore
+```
+   
+[`⇧ Back to Top`](#table-of-contents)
+
+---
+
+## **Be Sure to Build and Run**
+
+Building and Running the `JSopX.VideoAiPromptStudio` Project in Visual Studio is also another simple task.
+
+1. Build the solution in `Visual Studio`.
+2. Run the project:
+   - Use the **IIS Express** profile for local development.
+
+---
+
+**[`Home`](../README.md)** »  · · · [`⇧ Back to Top`](#table-of-contents)
+
+---
+
+
+[1]: https://github.com/JasonSilvestri/JSopX.VideoAiPromptStudio "JASON VIDEO AI PROMPT STUDIO ..."
+
+###### Copyright © 2025 [JSopX.VideoAiPromptStudio][1] — All Rights Reserved by Jason Silvestri
