@@ -3,18 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.ProperRCL", "JSopX.ProperRCL\JSopX.ProperRCL.csproj", "{86DBC08B-5959-4433-812F-7349AD998361}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.Proper.RCL", "JSopX.Proper.RCL\JSopX.Proper.RCL.csproj", "{86DBC08B-5959-4433-812F-7349AD998361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.LazyRCL", "JSopX.LazyRCL\JSopX.LazyRCL.csproj", "{C4269404-1723-4318-A653-7EE47A1E9566}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.Lazy.RCL", "JSopX.Lazy.RCL\JSopX.Lazy.RCL.csproj", "{C4269404-1723-4318-A653-7EE47A1E9566}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.AssetsRCL", "JSopX.AssetsRCL\JSopX.AssetsRCL.csproj", "{0B24B4E3-311E-4A54-B9DF-436300ED4BD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.Assets.RCL", "JSopX.Assets.RCL\JSopX.Assets.RCL.csproj", "{0B24B4E3-311E-4A54-B9DF-436300ED4BD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE.txt = LICENSE.txt
 		README.md = README.md
+		REBRIEFME.md = REBRIEFME.md
+		RECREATEME.md = RECREATEME.md
+		SECURITY.md = SECURITY.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.MauiCL", "JSopX.MauiCL\JSopX.MauiCL.csproj", "{CEB43B90-1E2F-4F9D-AD15-19FD3465C603}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.Maui.CL", "JSopX.Maui.CL\JSopX.Maui.CL.csproj", "{CEB43B90-1E2F-4F9D-AD15-19FD3465C603}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.SharedResources", "JSopX.SharedResources\JSopX.SharedResources.csproj", "{ECCB787C-5376-4652-9BB9-D4EAD00D4191}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.Components.RCL", "JSopX.Components.RCL\JSopX.Components.RCL.csproj", "{C6CB5E27-4854-456F-90B6-FA64E189F7F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +48,14 @@ Global
 		{CEB43B90-1E2F-4F9D-AD15-19FD3465C603}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEB43B90-1E2F-4F9D-AD15-19FD3465C603}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEB43B90-1E2F-4F9D-AD15-19FD3465C603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECCB787C-5376-4652-9BB9-D4EAD00D4191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECCB787C-5376-4652-9BB9-D4EAD00D4191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECCB787C-5376-4652-9BB9-D4EAD00D4191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECCB787C-5376-4652-9BB9-D4EAD00D4191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6CB5E27-4854-456F-90B6-FA64E189F7F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6CB5E27-4854-456F-90B6-FA64E189F7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6CB5E27-4854-456F-90B6-FA64E189F7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6CB5E27-4854-456F-90B6-FA64E189F7F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
