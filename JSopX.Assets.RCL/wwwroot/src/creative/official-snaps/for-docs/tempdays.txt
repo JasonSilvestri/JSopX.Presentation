@@ -1,0 +1,6 @@
+Date	Temperature (°F)
+Mon	65
+Tue	68
+Wed	70
+Thu	66
+Fri	64
