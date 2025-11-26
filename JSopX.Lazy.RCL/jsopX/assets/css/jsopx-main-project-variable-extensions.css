@@ -618,7 +618,7 @@
     --jsopx-bridge-too-far-table-border-color: var(--jsopx-open-project-x-table-border-color);
     /* -- */
     /* -- */
-    /* 1.4 RCL x Assets Razor Class Library: Uses Open Project X colors by default (you can modify these anytime you want, but do it with finesse). */
+    /* 1.4 Assets RCL Razor Class Library: Uses Open Project X colors by default (you can modify these anytime you want, but do it with finesse). */
 
     --jsopx-rcl-x-assets: var(--jsopx-open-project-x);
     --jsopx-rcl-x-assets-secondary: var(--jsopx-open-project-x-secondary);
@@ -722,7 +722,7 @@
     --jsopx-rcl-x-assets-table-border-color: var(--jsopx-open-project-x-table-border-color);
     /* -- */
     /* -- */
-    /* 1.5 RCL x Proper Razor Class Library: Uses Open Project X colors by default (you can modify these anytime you want, but do it with finesse). */
+    /* 1.5 Proper RCL Razor Class Library: Uses Open Project X colors by default (you can modify these anytime you want, but do it with finesse). */
 
 
     --jsopx-rcl-x-proper: var(--jsopx-open-project-x);
@@ -827,7 +827,7 @@
     --jsopx-rcl-x-proper-table-border-color: var(--jsopx-open-project-x-table-border-color);
     /* -- */
     /* -- */
-    /* 1.6 RCL x Components Razor Class Library: Uses Open Project X colors by default (you can modify these anytime you want, but do it with finesse). */
+    /* 1.6 Components RCL Razor Class Library: Uses Open Project X colors by default (you can modify these anytime you want, but do it with finesse). */
 
     --jsopx-rcl-x-components: var(--jsopx-open-project-x);
     --jsopx-rcl-x-components-secondary: var(--jsopx-open-project-x-secondary);
@@ -2324,7 +2324,7 @@ I am not sure if we should have one for just jsopx,
 }
 
 /* --------------------------------------------------
-  6. JSopX RCL x Assets Project Selectors
+  6. JSopX Assets RCL Project Selectors
 -------------------------------------------------- */
 
 .btn-jsopx-rcl-x-assets {
@@ -2436,7 +2436,7 @@ I am not sure if we should have one for just jsopx,
 }
 
 /* --------------------------------------------------
-  7. JSopX RCL x Proper Project Selectors
+  7. JSopX Proper RCL Project Selectors
 -------------------------------------------------- */
 
 .btn-jsopx-rcl-x-proper {
@@ -2549,7 +2549,7 @@ I am not sure if we should have one for just jsopx,
 
 
 /* --------------------------------------------------
-  8. JSopX RCL x Components Project Selectors
+  8. JSopX Components RCL Project Selectors
 -------------------------------------------------- */
 
 .btn-jsopx-rcl-x-components {
